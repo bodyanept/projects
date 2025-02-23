@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отец Сия страницы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="main">
+
+        <!-- верхний бар -->
+        <div class="main-bar">
+            <div class="name"><a href=""><div class="lettV">В</div><div class="contact"> контакте</div> </a> </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="">люди</a></li>
+                    <li><a href="">сообщества</a></li>
+                    <li><a href="">игры</a></li>
+                    <li><a href="">музыка</a></li>
+                    <li><a href="">помощь</a></li>
+                    <li><a href="">выйти</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper">
+
+            <div class="left-bar">
+                <ul>
+                    <li><a href="">Моя страница</a></li>
+                    <li><a href="">Мои Друзья</a></li>
+                    <li><a href="">Мои Фотографии</a></li>
+                    <li><a href="">Мои Видеозаписи</a></li>
+                    <li><a href="">Мои Аудиозаписи</a></li>
+                    <li><a href="">Мои Сообщения</a></li>
+                    <li><a href="">Мои Группы</a></li>
+                    <li><a href="">Мои Новости</a></li>
+                    <li><a href="">Мои Закладки</a></li>
+                    <li><a href="">Мои Настройки</a></li>
+                    <br>
+                    <li><a href="">Приложения </a></li>
+
+                </ul>
+            </div>
+
+            <div class="profile">
+                <div class="left-column">
+
+                    <div class="photo">
+                        <img src="img/350959_O.jpg" style="width: 100%;" alt="">
+                    <a href="">Редактировать</a>
+                    </div>
+                    <div class="social">
+                    <div class="friends">
+                        <div class="leftHeader">
+                            <a href="">Друзья</a>
+                            <div class="kol-vo">
+                                <p>6</p>
+                            </div>
+                        </div>
+
+                        <div class="friends-board">
+                            <a class="people">
+                                <img src="img/ава.jpg" style="width: 90%;" alt="">
+                                <p>Леха</p>
+                            </a>
+                            <a class="people">
+                                <img src="img/ава.jpg" style="width: 90%;" alt="">
+                                <p>Андрей</p>
+                            </a>
+                            <a class="people">
+                                <img src="img/ава.jpg" style="width: 90%;" alt="">
+                                <p>Екатерлина</p>
+                            </a>
+                            <a class="people">
+                                <img src="img/ава.jpg" style="width: 90%;" alt="">
+                                <p>Глеб</p>
+                            </a>
+                            <a class="people">
+                                <img src="img/ава.jpg" style="width: 90%;" alt="">
+                                <p>Ольга</p>
+                            </a>
+                            <a class="people">
+                                <img src="img/ава.jpg" style="width: 90%;" alt="">
+                                <p>Валерия</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="friends">
+
+                        <div class="leftHeader">
+                            <a href="">Друзья онлайн</a>
+                            <div class="kol-vo">
+                                <p>0</p>
+                            </div>
+                        </div>
+
+                        <div class="friends-board">
+                            
+                        </div>
+                    </div>
+
+                    <div class="audio">
+                        <div class="leftHeader">
+                            <a href="">Музыка</a>
+                            <div class="kol-vo">
+                                <p>2</p>
+                            </div>
+
+                        </div>
+                        <figure >
+                            <audio id="audioPlayer" controls src="audio/ooes - ночь.mp3"></audio> 
+                            
+                            <audio id="audioPlayer" controls src="audio/PALINA - Позови меня с собой (slowed).mp3"></audio> 
+                            
+                          </figure>
+
+                          
+                        
+                        
+                    </div>    
+                    </div>
+
+
+                    
+                    
+
+                </div>
+
+
+                <div class="wall">
+                    <div class="userName">
+                        <div class="name"><p>Отец</p></div>
+                        <div class="lastname"><p>Сия страницы</p></div>
+                    </div>
+                    <div class="status">
+                        <p id="innerStat"></p>
+                        <div id="stextAreaStat"><p id="newP"></p></div>
+                        <a href="#" onclick="changeStat()" id="chStat"><p>изменить статус</p></a>
+                    </div>
+                    <div class="about">
+                        <table>
+                            <tr>
+                                <td><p>День рождения:</p></td>
+                                <td><p>12.12.12</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Город:</p></td>
+                                <td><p>Стерлитамак</p></td>
+                            </tr>
+                        </table>
+
+                        <button onclick="openInfo()">
+                            Показать подробную информацию
+                        </button>
+                        <table id="dopolInfo" style="display: none;">
+                            <tr>
+                                <td><p>Пол:</p></td>
+                                <td><p>Мужской</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Любимые фильмы:</p></td>
+                                <td><p>Хоббит,Властелин колец,Темный рыцарь</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>О себе:</p></td>
+                                <td><p>Спокоен,трудолюбив,стараюсь всегда обучаться новому</p></td>
+                            </tr>
+                        </table>
+                        <div class="leftHeader right">
+                            <a href="">Мои фото</a>
+                            <div class="kol-vo">
+                                <p>4</p>
+                            </div>
+
+                        </div>
+                        <div class="photos">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>
+                        <div class="post-container">
+                            <textarea id="areaPost" placeholder=">Что у Вас нового?                   "></textarea>
+                           <button onclick="newPost()">Опубликовать</button>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="leftHeader right">
+                        <a href="">Все записи</a>
+                        </div>
+
+                    <div id="deskPost" class="deskPost">
+                        <div class="post">
+                            <div class="av">
+                                <img src="img/ава.jpg" alt="">
+                            </div>
+                            <div class="samPost">
+                                <div class="author"><p>Отец Сия страницы</p>
+                                <p class="date">19 фев в 13:50</p></div>
+                                <div class="content">
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum at ut, est molestias perspiciatis illo voluptatum distinctio consectetur accusantium quaerat similique porro omnis suscipit expedita laudantium ex alias praesentium!
+                                    </p>
+                                    <div class="post_photo">
+                                        <img src="img/11fd863697dd076852a1caf6e7399a67.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="likeBar">
+                                    <button id="like-btn" class="action-btn">
+                                        <span>👍</span> <span id="like-count">0</span>
+                                    </button>
+                                    <button id="repost-btn" class="action-btn">
+                                        <span>🔁</span> <span id="repost-count">0</span>
+                                    </button>
+                                    <button id="comment-btn" class="action-btn">
+                                        <span>💬</span> <span id="comment-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
