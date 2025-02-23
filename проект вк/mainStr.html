@@ -47,11 +47,65 @@
 
             <div class="profile">
                 <div class="left-column">
-
+                    
                     <div class="photo">
-                        <img src="img/350959_O.jpg" style="width: 100%;" alt="">
-                    <a href="">Редактировать</a>
+                        <div class="samoPhoto">
+                          <img src="img/350959_O.jpg" style="width: 100%;" alt="">  
+                          <a href="">Редактировать</a> 
+                        </div>
+                        
+                        <div style="display: none;" class="left_info">
+                           <div class="userName_left">
+                            <div class="name"><p>Отец</p></div>
+                            <div class="lastname"><p>Сия страницы</p></div>
+                        </div>
+                        <div class="status_left">
+                            <p id="innerStat"></p>
+                            <div id="stextAreaStat"><p id="newP"></p></div>
+                            <a href="#" onclick="changeStat()" id="chStat"><p>изменить статус</p></a>
+                        </div>
+                        <div class="about first">
+                            <table>
+                                <tr>
+                                    <td><p>День рождения:</p></td>
+                                    <td><p>12.12.12</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Город:</p></td>
+                                    <td><p>Стерлитамак</p></td>
+                                </tr>
+                            </table>
+    
+                            <button id="opBtn" onclick="openInfo(1)">
+                                Показать подробную информацию
+                            </button>
+                            <table id="dopolInfo" style="display: none;">
+                                <tr>
+                                    <td><p>Пол:</p></td>
+                                    <td><p>Мужской</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Любимые фильмы:</p></td>
+                                    <td><p>Хоббит,Властелин колец,Темный рыцарь</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>О себе:</p></td>
+                                    <td><p>Спокоен,трудолюбив,стараюсь всегда обучаться новому</p></td>
+                                </tr>
+                            </table>
+                            <button id="clsBtn" style="display: none;" onclick="closeInfo(1)">
+                                Скрыть
+                            </button>
+                            
+                            
+                        </div>
+                        </div>
+                        
+
+
+                    
                     </div>
+
                     <div class="social">
                     <div class="friends">
                         <div class="leftHeader">
@@ -133,17 +187,17 @@
 
 
                 <div class="wall">
-                    <div class="userName">
+                    <div class="userName_right">
                         <div class="name"><p>Отец</p></div>
                         <div class="lastname"><p>Сия страницы</p></div>
                     </div>
-                    <div class="status">
+                    <div class="status_right">
                         <p id="innerStat"></p>
                         <div id="stextAreaStat"><p id="newP"></p></div>
                         <a href="#" onclick="changeStat()" id="chStat"><p>изменить статус</p></a>
                     </div>
                     <div class="about">
-                        <table>
+                        <table class="second">
                             <tr>
                                 <td><p>День рождения:</p></td>
                                 <td><p>12.12.12</p></td>
@@ -154,10 +208,10 @@
                             </tr>
                         </table>
 
-                        <button onclick="openInfo()">
+                        <button class="second" id="opBtn2" onclick="openInfo(2)">
                             Показать подробную информацию
                         </button>
-                        <table id="dopolInfo" style="display: none;">
+                        <table class="second" id="dopolInfo2" style="display: none;">
                             <tr>
                                 <td><p>Пол:</p></td>
                                 <td><p>Мужской</p></td>
@@ -171,6 +225,9 @@
                                 <td><p>Спокоен,трудолюбив,стараюсь всегда обучаться новому</p></td>
                             </tr>
                         </table>
+                        <button id="clsBtn2" style="display: none;" onclick="closeInfo(2)">
+                            Скрыть
+                        </button>
                         <div class="leftHeader right">
                             <a href="">Мои фото</a>
                             <div class="kol-vo">

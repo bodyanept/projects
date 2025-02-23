@@ -173,7 +173,12 @@ font-weight: bold;
 
 
 
-.userName{
+.userName_right{
+    margin: 1% 0;
+    display: flex;
+    justify-content: start;
+}
+.userName_left{
     margin: 1% 0;
     display: flex;
     justify-content: start;
@@ -181,7 +186,7 @@ font-weight: bold;
 .lastname{
     margin: 0 0.5%;
 }
-.status{
+.status_right{
     border-bottom: 1px solid gray ;
 }
 .about {
@@ -296,4 +301,65 @@ textarea {
 
 .likeBar span {
     font-size: 15px;
+}
+
+@media (max-width:950px){
+    .audio audio{
+        width: 100%;
+    }
+    .left-bar ul{
+        padding-left: 0;
+    }
+}
+@media (max-width:750px){
+    .left-column{
+        padding-top: 5px;
+    }
+    .profile{
+        grid-template-columns: 90%;
+    }
+    .left_info{
+        display: block !important;
+        margin-left: 10px;
+    }
+    .userName_right{
+        display: none;
+    }
+    .status_right{
+        display: none;
+    }
+    .second{
+        display: none;
+    }
+    .photo{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .social{
+    width: 90% !important;
+    }
+    .social img {
+    width: 50px !important;
+    }
+    .left-bar{
+        font-size: smaller;
+    }
+}
+
+
+@media (max-width:620px){
+    .wrapper{
+        grid-template-columns: 100%;
+    }
+    .profile{
+        display: none;
+    }
+    .left-bar{
+        width: 100%;
+        font-size: large;
+    }
+    .left-bar li{
+        height: 30px;
+        border-bottom: 1px solid gray;
+    }
 }

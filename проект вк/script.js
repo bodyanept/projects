@@ -88,9 +88,31 @@ postPhoto.remove()
 deskPost.appendChild(clonedPost);
 }
 
-let openInfo=()=>{
-  dopolInfo.style.display='block'
-  
+let openInfo=(a)=>{
+  if(a==1){
+
+    dopolInfo.style.display='block'
+    clsBtn.style.display='block'
+    opBtn.style.display='none'
+  }else if(a==2){
+    dopolInfo2.style.display='block'
+    clsBtn2.style.display='block'
+    opBtn2.style.display='none'   
+  }
+}
+let closeInfo=(a)=>{
+  if(a==1){
+
+    dopolInfo.style.display='none'
+    clsBtn.style.display='none'
+    opBtn.style.display='block'
+  }else if(a==2){
+    dopolInfo2.style.display='none'
+  clsBtn2.style.display='none'
+  opBtn2.style.display='block'
+
+  }
+
 }
 
 
