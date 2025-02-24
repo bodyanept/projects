@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игры</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body onkeydown='keyHandler(event)'>
+    <div class="main">
+
+        <!-- верхний бар -->
+        <div class="main-bar">
+            <div class="name"><a href="mainStr.html"><div class="lettV">В</div><div class="contact"> китикете</div> </a> </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="">люди</a></li>
+                    <li><a href="">сообщества</a></li>
+                    <li><a href="games.html">игры</a></li>
+                    <li><a href="">музыка</a></li>
+                    <li><a href="">помощь</a></li>
+                    <li><a href="">выйти</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper">
+
+            <div class="left-bar games">
+                <ul>
+                    <li><a href="mainStr.html">Моя страница</a></li>
+                    <li><a href="">Мои Друзья</a></li>
+                    <li><a href="">Мои Фотографии</a></li>
+                    <li><a href="">Мои Видеозаписи</a></li>
+                    <li><a href="">Мои Аудиозаписи</a></li>
+                    <li><a href="">Мои Сообщения</a></li>
+                    <li><a href="">Мои Группы</a></li>
+                    <li><a href="">Мои Новости</a></li>
+                    <li><a href="">Мои Закладки</a></li>
+                    <li><a href="">Мои Настройки</a></li>
+                    <br>
+                    <li><a href="games.html">Приложения </a></li>
+
+                </ul>
+            </div>
+
+            <div class="profile games">
+                <div class="cardWall" id="cardWall">
+                    <div class="card">
+                        <img src="img/games/image_2025-02-24_17-51-15.png" alt="">
+                        <div class="gameName">
+                          <h2>Пистоль</h2>
+                        <p>простая тыкалка</p>
+                        </div>
+                        <button class="playBtn" onclick="playGame(1)"> Играть</button>  
+                        
+                    </div>
+
+                    <div class="card">
+                        <img src="img/games/image_2025-02-24_17-51-15.png" alt="">
+                        <div class="gameName">
+                          <h2>Пистоль</h2>
+                        <p>простая тыкалка</p>
+                        </div>
+                        <button class="playBtn" onclick="playGame(2)"> Играть</button>  
+                        
+                    </div>
+                </div>
+
+                <div class="gun" id="gunGame" style="display: none;">
+                    <h1>Тыкни пробел</h1>
+                    <div id="gun"></div>
+                    <div id="bullet"></div>
+                    <div id="aim"></div>
+
+                </div>
+
+                <div class="snake" id="snakeGame" style="display: none;">
+
+                    <canvas id="gameCanvas" width="500" height="500"></canvas>
+                </div>
+            </div>
+
+         </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>
