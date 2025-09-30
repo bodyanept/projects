@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jenga Web</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="ui">
+    <h1>Дженга</h1>
+    <div class="hint">
+      - ЛКМ: потянуть блок мышью
+      <br />- Колесо: зум камеры
+      <br />- ПКМ/Drag: вращение камеры
+      <br />- Клавиша R: сброс башни
+    </div>
+  </div>
+  <canvas id="scene"></canvas>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
