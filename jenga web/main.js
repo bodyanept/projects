@@ -20,6 +20,7 @@ controls.enableDamping = true;
 controls.target.set(0, 3, 0);
 // Use RMB to rotate, disable pan to keep LMB free for dragging blocks
 controls.enablePan = false;
+controls.enableRotate = true;
 controls.mouseButtons = {
   LEFT: THREE.MOUSE.PAN,    // disabled via enablePan = false
   MIDDLE: THREE.MOUSE.DOLLY,
@@ -228,6 +229,8 @@ function onPointerUp() {
 renderer.domElement.addEventListener('pointerdown', onPointerDown);
 window.addEventListener('pointermove', onPointerMove);
 window.addEventListener('pointerup', onPointerUp);
+// Allow RMB drag by disabling the context menu on the canvas
+renderer.domElement.addEventListener('contextmenu', (e) => e.preventDefault());
 
 // Reset tower
 window.addEventListener('keydown', (e) => {
