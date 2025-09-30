@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Максимальный трафик</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="title">Максимальный трафик</div>
+      <div class="hud">
+        <div class="hud-item">Угол тарелки (грубый): <span id="baseAngle">0.0°</span></div>
+        <div class="hud-item">Угол луча (точный): <span id="fineAngle">0.0°</span></div>
+        <div class="hud-item">Суммарный угол: <span id="totalAngle">0.0°</span></div>
+        <div class="hud-item">Скорость: <span id="rate">0.00 MB/s</span></div>
+        <div class="hud-item">Принято: <span id="downloaded">0 MB</span></div>
+        <div class="hud-item">Время: <span id="time">—</span></div>
+      </div>
+      <div class="controls">
+        <button id="startBtn">Старт</button>
+        <button id="pauseBtn">Пауза</button>
+        <button id="resetBtn">Сброс</button>
+        <label class="mode">
+          Режим: 
+          <select id="modeSelect">
+            <option value="endless">Бесконечный</option>
+            <option value="timed" selected>На время (120с)</option>
+          </select>
+        </label>
+        <label class="speed">
+          Скорость спутников: <span id="speedLabel">1.0x</span>
+          <input id="speedSlider" type="range" min="0.5" max="2.5" step="0.1" value="1" />
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <canvas id="game"></canvas>
+    </main>
+
+    <footer class="footer">
+      <div>
+        Управление: 
+        A/D — грубая настройка по 1° | 
+        ←/→ — тонкая настройка по 0.1°
+      </div>
+      <div>
+        Цель: набрать максимальный объём данных. Максимальная скорость при идеальном наведении на спутник.
+      </div>
+    </footer>
+
+    <!-- Floating leaderboard panel -->
+    <aside id="leaderboardPanel" class="leaderboard">
+      <div class="lb-header">Лидеры</div>
+      <ol id="leaderboardList" class="lb-list">
+        <!-- populated by JS -->
+      </ol>
+    </aside>
+
+    <!-- End-game modal -->
+    <div id="endModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="endTitle">
+      <div class="modal-dialog">
+        <h3 id="endTitle">Игра окончена</h3>
+        <p>Ваш результат: <strong id="finalScore">0 MB</strong></p>
+        <form id="scoreForm">
+          <label class="field">
+            Имя игрока
+            <input id="playerName" name="playerName" type="text" maxlength="40" placeholder="Ваше имя" required />
+          </label>
+          <div class="modal-actions">
+            <button type="submit" class="primary">Сохранить</button>
+            <button type="button" id="cancelModal" class="ghost">Позже</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+  </body>
+</html>
