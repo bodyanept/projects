@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Морской бой — LAN</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js?v=2"
+          onerror="(function(){var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js';s.onerror=function(){var l=document.createElement('script');l.src='/static/socket.io.min.js';document.head.appendChild(l);};document.head.appendChild(s);})();"></script>
+  <script>
+    // Extra safety: if none of the above loaded io, try local after DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function(){
+      if (typeof io === 'undefined') {
+        var s = document.createElement('script');
+        s.src = '/static/socket.io.min.js';
+        document.head.appendChild(s);
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Морской бой</h1>
+
+    <div id="lobby">
+      <div class="card">
+        <h2>Создать комнату</h2>
+        <button id="createRoomBtn">Создать</button>
+      </div>
+      <div class="card">
+        <h2>Присоединиться к комнате</h2>
+        <input id="joinCodeInput" placeholder="Код комнаты (5 цифр)" maxlength="5">
+        <button id="joinRoomBtn">Присоединиться</button>
+      </div>
+      <div class="card">
+        <h2>Игра с ботом</h2>
+        <button id="createBotRoomBtn">Играть с ботом</button>
+        <div class="msg">Быстрый старт: бот подключится сразу.</div>
+      </div>
+      <div id="lobbyMsg" class="msg"></div>
+    </div>
+
+    <div id="game" class="hidden">
+      <div class="info">
+        <div><strong>Код комнаты:</strong> <span id="roomCodeText"></span></div>
+        <div><strong>Вы:</strong> игрок <span id="seatText"></span></div>
+        <div id="turnText" class="turn"></div>
+      </div>
+
+      <div class="boards">
+        <div>
+          <h3>Ваше поле</h3>
+          <div id="myBoard" class="board"></div>
+        </div>
+        <div>
+          <h3>Поле соперника</h3>
+          <div id="enemyBoard" class="board"></div>
+        </div>
+      </div>
+
+      <div id="statusMsg" class="msg"></div>
+      <div id="connectionMsg" class="msg"></div>
+    </div>
+  </div>
+
+  <script src="/static/client.js?v=2"></script>
+</body>
+</html>
